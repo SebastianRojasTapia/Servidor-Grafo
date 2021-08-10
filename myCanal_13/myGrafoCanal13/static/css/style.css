@@ -13,6 +13,11 @@ body{
     overflow: hidden;
 }
 
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
 .siderbar{
     position: fixed;
     top: 0;
@@ -268,27 +273,26 @@ body{
     left: 240px;
 }
 
-.link {
-    fill: none;
-    stroke: #666;
-  }
-  
-  .linklabel {
-    font-size: 10px;
-    fill: #000;
-  }
-  
-  .source {
-    stroke: #333;
-    stroke-width: 0.5px;
-  }
-  
-  .target {
-    stroke: #333;
-    stroke-width: 0.5px;
-  }
-  
-  .nodelabel {
-    font-size: 0.8em;
-  }
-  
+.col-2.twits{
+    color: #fb6900;
+}
+
+.col-2.twits h1{
+    font-size: 15px;
+}
+
+.col-10{
+    height: 750px;
+}
+
+.col-md-6{
+    color: #fb6900;
+    margin: 20px 20px;
+}
+
+.col-md-6 h1{
+    color: black;
+    border-radius: 12px;
+    border-left: 3px solid #fb6900;
+    border-bottom: 3px solid #fb6900;
+}

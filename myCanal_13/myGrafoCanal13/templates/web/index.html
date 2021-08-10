@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'img/LogoCanal13.png'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Canal 13</title>
 </head>
 <body>
     <div class="siderbar">
@@ -98,12 +99,32 @@
         </div>
     </div>
     <div class="home_content">
+        <div class="text">Grafo Canal 13</div>
     
-        <div class="text">Home Content</div>
-        <div id="myGraph"></div>
+        <div class="row">
+            <div class="col-10">
+                <iframe id="injection-graphXR-iframe-id"  origin="*"></iframe>
+            </div>
+            <div class="col-2 twits">
+                <h1>Datos</h1>
+                <h1>Positivos : 250</h1>
+                <h1>Neutral : 59</h1>
+                <h1>Negativos : 101</h1>
+                <h1>Cantidad de Twists : 410</h1>
+                <h1>Dia  : 30/07/2021</h1>
+                <br>
+                <h1>Top 1 #</h1>
+                <h1>Top 2 #</h1>
+                <h1>Top 3 #</h1>
+                <h1>Top 4 #</h1>
+                <h1>Top 5 #</h1>
+            </div>
+            <div class="col-md-6 .offset-md-3">
+                <h1>Histograma Proximamente Disponible</h1>
+            </div>
+        </div>
     </div>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="{% static 'js/graphXR.injection.js'%}"></script>
     <script src="{% static 'js/menu.js'%}"></script>
-    <script src="{% static 'js/data_grafo.js'%}"></script>
 </body>
 </html>
