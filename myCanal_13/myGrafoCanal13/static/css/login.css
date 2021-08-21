@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f5f7;
+	align-items: center;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	height: 95vh;
+	place-items: center;
+}
+
+h1 {
+	font-weight: 300;
+    margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	color: white;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+	font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-container a.recuperar{
+    color: #333;
+	font-size: 20px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.btn {
+	background-image: linear-gradient(50deg, rgba(255, 184, 0, 1) 0%, #fb6900 70%);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+form {
+	background-color: #e9e9e9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 3rem;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin: 0.5rem 0;
+	width: 100%;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 450px;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.form-container.sign-up-container .btn{
+    margin-top: 10px;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: url("https://www.xtrafondos.com/wallpapers/ciudad-edificios-de-cyberpunk-2077-7727.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: -100%;
+	position: relative;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+	width: 200%;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+	width: 50%;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+    text-decoration: none;
+    color: #fb6900;
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 25px;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.overlay-panel h1.panel-left, .overlay-panel h1.panel-right  {
+    color: #fff;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;  
+}
+
+.widget {
+/* 	width: 600px; */
+	margin: 25px;
+}
+
+.widget p {
+	display: inline; 
+  position: relative;
+}
+
+.fecha {
+	font-family: 'Google Sans', sans-serif;
+	text-align: center;
+	font-size: 2em;
+	padding: 20px;
+	width: 100%;
+	background: #fb6900;
+	margin-bottom: 5px;
+  box-sizing: border-box;
+  border-radius: 25px 25px 0 0
+}
+
+.fecha p {
+	color: white;
+}
+
+.reloj {
+	font-family: 'Google Sans';
+	text-align: center;
+	font-size: 30px;
+	padding: 20px;
+	width: 100%;
+	background: #fb6900;
+  box-sizing: border-box;
+  border-radius: 0 0 25px 25px
+}
+
+.reloj span{
+	color: white;
+}
+
+.reloj .caja-segundos {
+	display: inline-block;
+}

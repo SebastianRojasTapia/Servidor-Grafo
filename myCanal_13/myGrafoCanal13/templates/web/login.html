@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="icon" href="{% static 'img/LogoCanal13.png'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Inicio Sesión</title>
+</head>
+<body>
+
+<div class="wrap">
+	<div class="widget">
+		<div class="fecha">
+			<p id="diaSemana" class="diaSemana"></p>
+			<p id="dia" class="dia"></p>
+			<p>de </p>
+			<p id="mes" class="mes"></p>
+			<p>del </p>
+			<p id="year" class="year"></p>
+		</div>
+		<div class="reloj">
+			<span id="horas" class="horas"></span>
+			<span>:</span>
+			<span id="minutos" class="minutos"></span>
+			<span>:</span>
+			<span id="segundos" class="segundos"></span>
+		</div>
+	</div>
+</div>
+
+	
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="{% url 'REG'%}" method="POST">
+            {% csrf_token %}
+			<h1>Registrate</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class='bx bxl-facebook-square'></i></a>
+				<a href="#" class="social"><i class='bx bxl-google'></i></a>
+				<a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
+			</div>
+			<span>Usa tu email para registrate</span>
+			<input type="text" name="user-c" id="newuser" placeholder="Usuario" require />
+			<input type="email" name="email" id="newemail" placeholder="Email" required/>
+			<input type="password" name="pass-c" id="newpass" placeholder="Contraseña" required/>
+            <h2>{{mensaje}}</h2>
+			<button type="submit" class="btn">Registrate</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="{% url 'LOGIN'%}" method="POST">
+			<h1>Iniciar sesión</h1>
+            {% csrf_token %}
+			<div class="social-container">
+				<a href="#" class="social"><i class='bx bxl-facebook-square'></i></a>
+				<a href="#" class="social"><i class='bx bxl-google'></i></a>
+				<a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
+			</div>
+			<span>Usa tu cuenta</span>
+			<input type="text" name="user" id="user" placeholder="Usuario" required/>
+			<input type="password" name="pass" id="pass" placeholder="Contraseña" required/>
+			<a class="recuperar" href="#">¿Olvidates tu Contraseña?</a>
+            <h2>{{msg}}</h2>
+			<button type="submit" class="btn">Iniciar sesión</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1 class="panel-left">¡Bienvenido de nuevo!</h1>
+				<p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+				<button class="btn" id="signIn">Acceder</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1 class="panel-right">¡Hola amigo!</h1>
+				<p>Ingrese sus datos personales y comience su viaje con nosotros</p>
+				<button class="btn" id="signUp">Registrate</button>
+			</div>
+		</div>
+	</div>
+</div>
+    <script src="{% static 'js/reloj.js'%}"></script>
+    <script src="{% static 'js/login.js'%}"></script>
+</body>
+</html>
