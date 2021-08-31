@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,23 +33,22 @@
 	</div>
 </div>
 
-	
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="{% url 'REG'%}" method="POST">
-            {% csrf_token %}
-			<h1>Registrate</h1>
+		<form>
+			<img src="{% static 'img/duocuc.png'%}" alt="">
 			<div class="social-container">
 				<a href="#" class="social"><i class='bx bxl-facebook-square'></i></a>
 				<a href="#" class="social"><i class='bx bxl-google'></i></a>
 				<a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
 			</div>
-			<span>Usa tu email para registrate</span>
-			<input type="text" name="user-c" id="newuser" placeholder="Usuario" require />
-			<input type="email" name="email" id="newemail" placeholder="Email" required/>
-			<input type="password" name="pass-c" id="newpass" placeholder="Contraseña" required/>
-            <h2>{{mensaje}}</h2>
-			<button type="submit" class="btn">Registrate</button>
+			<h3>Equipo de Trabajo</span>
+			<h1>Rodrigo Seguel</h1>
+			<h1>Sebastian Martinez</h1>
+			<h1>Valeria Trizia</h1>
+			<h1>Daniela Sepulveda</h1>
+			<h1>Sebastian Rojas Tapia</h1>
+			<h1>David Villarroel</h1>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -72,14 +71,14 @@
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1 class="panel-left">¡Bienvenido de nuevo!</h1>
+				<h1 class="panel-left">¡Ingresa Sesión!</h1>
 				<p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
 				<button class="btn" id="signIn">Acceder</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1 class="panel-right">¡Hola amigo!</h1>
-				<p>Ingrese sus datos personales y comience su viaje con nosotros</p>
-				<button class="btn" id="signUp">Registrate</button>
+				<h1 class="panel-right">¡Bienvenido!</h1>
+				<p>Integrantes del Equipo DuocUC</p>
+				<button class="btn" id="signUp">Equipo DuocUC</button>
 			</div>
 		</div>
 	</div>

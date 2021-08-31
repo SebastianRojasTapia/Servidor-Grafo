@@ -2,37 +2,50 @@
 {% load static %}}
 {% block estilos %}
 {% endblock estilos %}
-
-
-
+{% block nombrePestana %}
+    <title>Carga de datos</title>
+{% endblock nombrePestana %}
 {% block contenido %}
 
-<div class="text">Grafo Canal 13</div>
-    <div class="row">
-        <div class="col-10">
-            <!--<iframe id="injection-graphXR-iframe-id"  origin="*"></iframe>-->
-        </div>
-        <div class="col-2 twits">
-            <h1>Datos</h1>
-            <h1>Positivos : 250</h1>
-            <h1>Neutral : 59</h1>
-            <h1>Negativos : 101</h1>
-            <h1>Cantidad de Twists : 410</h1>
-            <h1>Dia  : 30/07/2021</h1>
-            <br>
-            <h1>Top 1 #</h1>
-            <h1>Top 2 #</h1>
-            <h1>Top 3 #</h1>
-            <h1>Top 4 #</h1>
-            <h1>Top 5 #</h1>
-        </div>
-        <div class="col-md-6 .offset-md-3">
-            <h1>Histograma Proximamente Disponible</h1>
-        </div>
+<div class="container mt-5">
+  <h1 class="text-center">Bootstrap 4 Upload multiple files</h1>
+  <div class="col-sm-12 col-lg-4 mr-auto ml-auto border p-4">
+  <form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label><strong>Upload Files</strong></label>
+      <div class="custom-file">
+        <input type="file" name="files[]" multiple class="custom-file-input form-control" id="customFile">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="button" name="upload" value="upload" id="upload" class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i> Upload</button>
+    </div>
+  </form>
 </div>
+<script>
+    $(document).ready(function() {
+    $('input[type="file"]').on("change", function() {
+      let filenames = [];
+      let files = this.files;
+      if (files.length > 1) {
+        filenames.push("Total Files (" + files.length + ")");
+      } else {
+        for (let i in files) {
+          if (files.hasOwnProperty(i)) {
+            filenames.push(files[i].name);
+          }
+        }
+      }
+      $(this)
+        .next(".custom-file-label")
+        .html(filenames.join(","));
+    });
+});
+  
+</script>
 {% endblock contenido %}
 
 {% block js %}
-    <script src="{% static 'js/graphXR.injection.js'%}"></script>
-    <script src="{% static 'js/menu.js'%}"></script>
+    <script src="{% static 'js/upload.js'%}"></script>
 {% endblock js %}

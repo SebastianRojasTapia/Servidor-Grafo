@@ -1,0 +1,24 @@
+{% extends "web/base.html" %}
+{% load static %}}
+{% block estilos %}
+ 
+{% endblock estilos %}
+{% block nombrePestana %}
+    <title>Panel</title>
+{% endblock nombrePestana %}
+{% block contenido %}
+<body>	
+  <h1>HOLIII</h1>
+  <form action="{% url 'P'%}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn">Iniciar Script</button>
+  </form>
+</body>
+{% endblock contenido %}
+
+{% block js %}
+    <!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
+    <script src="{% static 'js/panel.js'%}"></script>
+    <script src="{% static 'js/menu.js'%}"></script>
+{% endblock js %}
+

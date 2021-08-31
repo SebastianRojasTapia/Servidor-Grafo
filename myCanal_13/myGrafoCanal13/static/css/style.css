@@ -168,6 +168,7 @@ iframe{
     white-space: nowrap;
 }
 
+
 .siderbar ul li a:hover{
     color: #fb6900;
     background: #fff;   
@@ -179,6 +180,7 @@ iframe{
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+    font-size: 25px;
 }
 
 .siderbar .profile_content{
@@ -249,11 +251,18 @@ iframe{
     text-align: center;
     transition: all 0.4s ease;
     background: #ff8731;
+    color: white;
+}
+
+.profile #log_out:hover{
+    color: #fb6900;
+    background: #fff;   
 }
 
 .siderbar.active .profile #log_out{
     left: 88%;
-    background: #ff8731;
+    color: #fb6900;
+    background: #fff;
 }
 
 .home_content{

@@ -9,7 +9,7 @@ body {
 	background: #f6f5f7;
 	align-items: center;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: grid;
@@ -22,10 +22,6 @@ h1 {
     margin: 0;
 }
 
-h2 {
-	text-align: center;
-}
-
 p {
 	color: white;
     font-size: 20px;
@@ -36,41 +32,20 @@ p {
 }
 
 span {
-	font-size: 20px;
     margin-bottom: 10px;
 }
 
-.form-container a.recuperar{
-    color: #333;
-	font-size: 20px;
-	text-decoration: none;
-	margin: 15px 0;
-}
-
-.btn {
-	background-image: linear-gradient(50deg, rgba(255, 184, 0, 1) 0%, #fb6900 70%);
-    border-radius: 20px;
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    padding: 0.9rem 4rem;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-}
-
-button:active {
+.btn:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.btn:focus {
 	outline: none;
 }
 
 h2 {
     font-size: 1rem;
+	text-align: center;
     margin-bottom: 1rem;
     color: red;
 }
@@ -94,6 +69,75 @@ input {
 	width: 100%;
 }
 
+.fecha {
+	font-family: 'Google Sans', sans-serif;
+	text-align: center;
+	font-size: 2em;
+	padding: 10px;
+	width: 100%;
+	background: #fb6900;
+	margin-bottom: 5px;
+  box-sizing: border-box;
+  border-radius: 25px 25px 0 0
+}
+
+.fecha p {
+	color: white;
+}
+
+.reloj {
+	font-family: 'Google Sans';
+	text-align: center;
+	font-size: 30px;
+	width: 100%;
+	background: #fb6900;
+  box-sizing: border-box;
+  border-radius: 0 0 25px 25px
+}
+
+.reloj span{
+	color: white;
+}
+
+.reloj .caja-segundos {
+	display: inline-block;
+}
+
+.form-container.sign-up-container h1{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fb6900;
+	font-size: 15px;
+}
+
+.form-container.sign-up-container h3{
+	margin-bottom: 20px;
+}
+
+.form-container.sign-up-container img{
+	width: 90%;
+}
+
+.form-container a.recuperar{
+    color: #333;
+	font-size: 20px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button.btn{
+	background-image: linear-gradient(50deg, rgba(255, 184, 0, 1) 0%, #fb6900 70%);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
@@ -103,6 +147,7 @@ input {
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
+	margin-top: -150px;
 	min-height: 450px;
 }
 
@@ -171,7 +216,7 @@ input {
 .overlay {
 	background: url("https://www.xtrafondos.com/wallpapers/ciudad-edificios-de-cyberpunk-2077-7727.jpg");
 	background-attachment: fixed;
-	background-position: center;
+	background-position: bottom;;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -258,37 +303,3 @@ input {
   position: relative;
 }
 
-.fecha {
-	font-family: 'Google Sans', sans-serif;
-	text-align: center;
-	font-size: 2em;
-	padding: 20px;
-	width: 100%;
-	background: #fb6900;
-	margin-bottom: 5px;
-  box-sizing: border-box;
-  border-radius: 25px 25px 0 0
-}
-
-.fecha p {
-	color: white;
-}
-
-.reloj {
-	font-family: 'Google Sans';
-	text-align: center;
-	font-size: 30px;
-	padding: 20px;
-	width: 100%;
-	background: #fb6900;
-  box-sizing: border-box;
-  border-radius: 0 0 25px 25px
-}
-
-.reloj span{
-	color: white;
-}
-
-.reloj .caja-segundos {
-	display: inline-block;
-}
