@@ -1,508 +1,90 @@
-body {
-    padding-top: 20px;
-    color: #73879C;
-    background: #F7F7F7;
-    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.471;
-}
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background: rgba( 255, 255, 255, .8 ) 
-                url('../img/default.gif') 
-                50% 50% 
-                no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
-}
-
-/* NavBar preferences */
-.navbar-default {
-  background-color: #EDEDED;
-  border-color: #D9DEE4;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.navbar-default .navbar-header .navbar-brand {
-  color: #73879C;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-  color: #2f9921;
-}
-.navbar-default .navbar-header .navbar-toggle {
-  font-weight: 700;
-  font-size: 12px;
-  color: #73879C;
-  text-transform: uppercase;
-}
-.navbar-default .nav > li > a,
-.navbar-default .nav > li > a:focus {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13px;
-  color: #73879C;
-}
-.navbar-default .nav > li > a:hover,
-.navbar-default .nav > li > a:focus:hover {
-  color: #73879C;
-}
-.navbar-default .nav > li.active > a,
-.navbar-default .nav > li.active > a:focus {
-  color: #D9DEE4 !important;
-  background-color: transparent;
-}
-.navbar-default .nav > li.active > a:hover,
-.navbar-default .nav > li.active > a:focus:hover {
-  background-color: transparent;
-}
-@media (min-width: 768px) {
-  .navbar-default {
-    background-color: #EDEDED;
-    border-color: #D9DEE4;
+:root {
+	--main-radius: 12px;
+	--main-padding: 5px;
   }
-  .navbar-default .navbar-header .navbar-brand {
-    color: #73879C;
+  
+  body {
+	font-family: "Inter", sans-serif;
   }
-  .navbar-default .navbar-header .navbar-brand:hover,
-  .navbar-default .navbar-header .navbar-brand:focus {
-    color: #2f9921;
+  
+  .container-panel {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.2fr 1.5fr 1.2fr;
+	grid-template-areas:
+	  "nav nav"
+	  "main main"
+	  "content1 content2";
+	grid-gap: 0.6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #004d40;
+	text-align: center;
+	margin: 15px;
   }
-  .navbar-default .nav > li > a,
-  .navbar-default .nav > li > a:focus {
-    color: #73879C;
+  
+  nav {
+	background: #36363c;
+	grid-area: nav;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
   }
-  .navbar-default .nav > li > a:hover,
-  .navbar-default .nav > li > a:focus:hover {
-    color: #2f9921;
+  
+  nav h1{
+	  color: white;
   }
-}
 
-.page {
-    max-width:1200px;
-    margin: 0 auto;
-    margin-top: 30px;
-    background: #F7F7F7;
-}
+  main {
+	background: #72706e;;
+	grid-area: main;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+  
+  
+  #content1 {
+	background: #36363c;
+	grid-area: content1;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+  
+  #content2 {
+	background: #36363c;
+	grid-area: content2;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
 
-.container {
-    width:auto;
-    margin:0px;
-}
-
-.no-border {
-    border: 1px solid transparent;
-    border-radius: 0px;
-    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
-    box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
-}
-
-.panel {
-    padding: 7px 10px;
-    background: #fff;
-    border: 1px solid #E6E9ED;
-    border-radius: 0px;
-    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
-    box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
-    /*font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;*/
-}
-.panel-title{
-    font-size: 20px;
-    /*font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;*/
-}
-.panel-heading{
-    padding: 5px 5px 7px;
-    /*padding: 10px 0px 2px 0px;*/
-    border-bottom: 2px solid #E6E9ED;
-    margin-bottom: 10px;
-}
-.panel .btn{
-    padding-top:2px; padding-bottom:2px;
-    font-size: 11px;
-    color: #2A3F54;
-}
-
-
-.left-col{
-    width: 70px;
-    padding: 0;
-    z-index: 9999;
-    position: absolute;
-    min-height: 1px;
-    float: left;
-    background: #2A3F54;
-}
-
-
-.signalpanel{
-    margin-top:30px;
-    width: 100%;
-    height: 380px;
-}
-#signal {
-    width:100%; 
-    height:180px;
-    /*height: 100px;*/
-}
-.signalpanel .btn-group{
-    margin-bottom: -10px;
-    margin-top: -20px;
-}
-.signalpanel .btn {
-    height: 23px;
-    padding: 0px;
-    margin: 0px 5px;
-    border:0px;
-    font-size: 13px;
-}
-.signalpanel .input{
-    height: 23px;
-}
-
-.range-display{
-    fill: blue;
-    stroke: blue;
-    opacity: 0.2;
-}
-
-.transparent{
-    fill: none;
-    opacity: 0;
-}
-
-input::-webkit-inner-spin-button { display: none; }
-input.active{
-    border-width: 0px
-}
-.input{
-    font-size: 11px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    border-color: #d9dee4;
-}
-.signalpanel .marker-circle{
-    fill: red; 
-    fill-opacity: 0.2;                             
-    stroke: red;
-    opacity: 0.7;
-}
-.signalpanel .marker-line{
-    stroke: red;
-    stroke-width: 1;
-    opacity: 0.5;
-}
-.signalpanel text {
-    color: red;
-    font-size: 10px;
-    font-weight: normal;
-}
-.signalpanel .label{
-    fill: #73879C;
-    font-size: 11px;
-}
-.signalpanel .tick{
-    fill: #73879C;
-    font-size: 11px;
-}
-#toggle-stop:active {
- background-color: transparent;
-}
-.signal-path{
-    stroke: #2A3F54;
-    stroke-width: 1.1;
-    fill: none;
-}
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #73879C;
-    stroke-width: 1px;
-    shape-rendering: crispEdges;
-}
-.indicator{
-    stroke: #73879C;
-    stroke-dasharray: 3.3;
-    opacity: 0.8;
-}
-.y1{
-    fill: #73879C;
-    opacity: 1;
-    font-size: 15;
-}
-.d3-tip{
-    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
-    font-size: 11px;
-    font-weight: normal;
-}
-
-
-.zoompanel{
-    width: 100%;
-    height: 230px;
-}
-#zoom {
-    width:100%; 
-    height:120px;
-    /*height: 100px;*/
-}
-.signal-subtitle{
-    font-size: 14px;
-    padding-left: 5px;
-}
-
-.info-button{
-    color: #7396ca;
-    font-size: 14px;
-    padding-left: 5px;
-    vertical-align: text-top;
-}
-
-/* Main Map of Chile */
-.countrymap{
-    /*height:*/ 
-}
-.countrymap .panel-heading{
-    margin-bottom: 0px;
-}
-.countrymap .panel-body{
-    position:relative; width:100%; height: 600px;
-}
-
-.tweetspanel {
-    width:100%; 
-    height:652px;
-}
-.tweetspanel .panel-heading{
-    margin-bottom: 0px;
-}
-.tweetspanel table{
-    width: 100%;
-}
-.tweet-feed{
-    border-right: 1px solid #f3f3f3;
-    border-left: 1px solid #f3f3f3;
-    border-bottom: 2px solid #D9DEE4;
-}
-
-.tweetspanel li{
-    background: white;
-    position: relative;
-    padding: 0px;
-    margin-bottom: 0px;
-    list-style: none;
-}
-.tweetspanel a{
-    text-decoration: none;
-    color: #2A3F54;
-}
-.tweetspanel li:hover{
-    background: #f3f3f3;
-}
-.load-tweets{
-    color: #2A3F54;
-    font-size: 13px;
-    font-weight: normal;
-    display: block;
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-}
-
-.load-tweets:hover{
-    background-color: #f3f3f3;
-}
-
-
-.scrollpane{
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    height: inherit;
-    overflow-x: hidden;
-    overflow-y: auto;
-    color:  #000;
-}
-.tweet-feed{
-    width:100%; 
-    height:94%;
-    font-family: arial;
-    font-size: 12px;
-}
-.tweet-feed-csn{
-    width:100%; 
-    height:90%;
-    font-family: arial;
-    font-size: 14px;
-}
-.tweet-feed-world{
-    width:100%; 
-    height:155px;
-    font-family: arial;
-    font-size: 11px;
-}
-.tweet-row{
-    border-bottom: 0px solid #f3f3f3;
-    background-color:none;  
-    width: 100%;
-}
-.tweet-header{
-    width: 100%;
-    border-spacing: 0px;
-    border-collapse: separate;
-    color: rgb(28, 52, 91);
-}
-.tweet-img{
-    width: auto;
-    height: 38px;
-    padding: 2px;
-    margin-right: 5px;
-}
-.tweet-name{
-    color: #2A3F54; 
-    font-weight: bold;
-}
-.tweet-screen{
-    color: #73879C;
-}
-.tweet-date{
-    text-decoration:none;
-    color: #73879C; 
-    font-style: italic;
-}
-.tweet-location{
-    color: #73879C;
-}
-.tweet{
-    padding: 10px;
-}
-.tweet:hover{
-    background-color: #f5f5f5;
-}
-.tweet-button{
-    width: 100%;
-    padding: 0px;
-    border-spacing: 0px;
-    border-collapse: separate;
-}
-.reply {
-     color: rgb(105, 120, 130);
-}
-.icon-reply {
-    width: 1.07639em;
-    background-image: url(images/reply.html);
-    transform: scaleX(1);
-}
-.reply:hover .icon-reply {
-    background-image: url(images/reply.html);
-}
-.reply:hover {
-    color: rgb(29, 161, 242);
-    text-decoration: none;
-}
-.heart {
-    color: rgb(105, 120, 130);
-}
-
-.icon-heart {
-    width: 0.9375em;
-    background-image: url(images/heart.html);
-}
-
-.heart:hover .icon-heart {
-    background-image: url(images/heart.html);
-}
-
-.heart:hover {
-    color: rgb(232, 28, 79);
-    text-decoration: none;
-}
-
-.retweet {
-    color: rgb(105, 120, 130);
-}
-
-.icon-retweet {
-    width: 1.28472em;
-    background-image: url(images/retweet.html);
-    transform: scaleX(1);
-}
-
-.retweet:hover .icon-retweet {
-    background-image: url(images/retweet.html);
-}
-
-.retweet:hover {
-    color: rgb(25, 207, 134);
-    text-decoration: none;
-}
-
-.worldpanel{
-    width:100%; 
-    height:400px;
-}
-.worldpanel .panel-heading{
-    margin-bottom: 0px;
-}
-.worldpanel .tooltip {   
-    position: absolute;         
-    text-align: center;                           
-    padding: 2px;               
-    font: 12px sans-serif;       
-    border: 0px;        
-    border-radius: 8px;         
-    pointer-events: none;           
-}
-.worldpanel .label{
-    color: black;
-}
-#worldmap{
-    color:black;
-    position:relative; 
-    width:100%; 
-    height:90%;
-}
-
-
-
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+  button.btn{
+	background-image: #fff;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: #fb6900;
     cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
 }
+  
+  @media only screen and (max-width: 750px) {
+	.container-panel {
+	  grid-template-columns: 1fr;
+	  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+	  grid-template-areas:
+		"nav"
+		"main"
+		"content1"
+		"content2";
+	}
+
+	button.btn{
+		width: 20%;
+	}
+  }
+  

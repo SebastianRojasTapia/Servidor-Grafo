@@ -1,18 +1,37 @@
 {% extends "web/base.html" %}
 {% load static %}}
 {% block estilos %}
- 
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/panel.css'%}">
 {% endblock estilos %}
 {% block nombrePestana %}
     <title>Panel</title>
 {% endblock nombrePestana %}
 {% block contenido %}
-<body>	
-  <h1>HOLIII</h1>
-  <form action="{% url 'P'%}" method="POST">
-    {% csrf_token %}
-    <button type="submit" class="btn">Iniciar Script</button>
-  </form>
+<body>
+  <div class="container-panel">
+		<nav>
+    <h1>Twists-Time</h1>
+    </nav>
+		<main>
+      <div class="row">
+        <div class="col-6 mt-3">
+          <form action="{% url 'P'%}" method="POST" class="inicio" id="inicio">
+            {% csrf_token %}
+            <button type="submit" class="btn">Iniciar Tiempo</button>
+          </form>
+        </div>
+        <div class="col-6 mt-3">
+          <form action="{% url 'P'%}" method="POST" class="detener" id="detener">
+            {% csrf_token %}
+            <button type="submit" class="btn">Detener Tiempo</button>
+          </form>
+        </div>
+      </div>
+    </main>
+		<div id="content1">GRAFICO</div>
+		<div id="content2">GRAFICO</div>
+	</div>	
 </body>
 {% endblock contenido %}
 

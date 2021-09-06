@@ -16,33 +16,17 @@ sentiment = sentiment_analysis.SentimentAnalysisSpanish()
 
 # Create your views here.
 
-class MaxListener(tweepy.StreamListener):
-
-    def on_data(self, raw_data):
-        self.process_data(raw_data)
-        return True
-
-    def process_data(self, raw_data):
-        
-        global sentiment
-        # text -> diccionario
-        tweet = json.loads(raw_data) 
-        print(tweet)
-        sent = sentiment.sentiment(tweet['text'])
-        tweet_exportable = json.dumps(tweet, ensure_ascii=False).encode('utf8').decode()
-
-    def on_error(self, status_code):
-        if status_code == 420:
-            #retorna falso en on_data desconecta el vivo
-            return False
-#se crea el vivo
-class MaxStream():
+class TweetsListener(tweepy.StreamListener):
+    def on_connect(self):
+      print ("Estoy Conectado!")
     
-    def __init__(self, auth, listener):
-        self.stream = tweepy.Stream(auth=auth, listener=listener)
-        
-    def start(self, keyword_list):
-        self.stream.filter(track=keyword_list)
+    def on_status(self,status):
+      print (status.created_at,status.text,status.source)
+
+    def on_error(self,status_code):
+      print ("Error", status_code)
+
+
 
 def logout_vista(request):
     logout(request)
@@ -76,15 +60,17 @@ def red(request):
 def panel(request):
     
     if request.POST:
-        sentiment = sentiment_analysis.SentimentAnalysisSpanish()
-        #comienza vivo
-        listener = MaxListener()
-
-        auth = tweepy.OAuthHandler(c_k,c_s)
-        auth.set_access_token(a_t,a_t_s)
-
-        stream = MaxStream(auth, listener)
-        stream.start(['T13', 't13'])
-        return render(request,'web/panel.html')
+        auth = tweepy.OAuthHandler(API_KEY,API_SECRET_KEY)
+        auth.set_access_token(ACCESS_TOKEN,ACCESS_TOKEN_SECRET)
+        api = tweepy.API(auth,wait_on_rate_limit_notify=True, wait_on_rate_limit=True)
+        stream = TweetsListener()
+        streamingApi=tweepy.Stream(auth=api.auth,listener=stream)
+        streamingApi.filter(
+            locations=[-82.894652146,-56.1959888356,-64.2317965251,13.5111203983],
+            track = {'T13','13','Chile'}),
+            
+        data={
+            'tweest':stream}
+        return render(request,'web/panel.html',data)
     return render(request,'web/panel.html')
 

@@ -13,6 +13,7 @@ body{
     /* 
     overflow: hidden;
     */
+    z-index: 2;
     
 }
 
@@ -30,6 +31,7 @@ iframe{
     background: #fb6900;
     padding: 6px 14px;
     transition: all 0.5s ease;
+    z-index: 1;
 }
 
 .siderbar.active{
@@ -271,6 +273,7 @@ iframe{
     width: calc(100% - 78px);
     left: 78px;
     transition: all 0.5s ease;
+    z-index: -1;
 }
 
 .home_content .text{

@@ -1,6 +1,6 @@
 #keys secret 
 
-c_k = "MrKxxeLjE4CCRQmMOYKeJiurL"
-c_s = "aKnEaNVTBRVgdnrfgEMVNQ9twQWgLz1e2qVxxvTq2mzEQ8es7x"
-a_t = "268529139-nqcJBQzTervn6Sbq2sfcrJLX7AgGF20LJM705ss3"
-a_t_s = "oCoaAhgEVvb2AckTOYlGZmwwkjSrLZCxWsDtbLw9UlXsB"
+API_KEY = 'MrKxxeLjE4CCRQmMOYKeJiurL'
+API_SECRET_KEY = 'aKnEaNVTBRVgdnrfgEMVNQ9twQWgLz1e2qVxxvTq2mzEQ8es7x'
+ACCESS_TOKEN = '268529139-nqcJBQzTervn6Sbq2sfcrJLX7AgGF20LJM705ss3'
+ACCESS_TOKEN_SECRET= 'oCoaAhgEVvb2AckTOYlGZmwwkjSrLZCxWsDtbLw9UlXsB'

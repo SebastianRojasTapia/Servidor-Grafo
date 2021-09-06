@@ -1,35 +1,132 @@
 {% extends "web/base.html" %}
 {% load static %}}
 {% block estilos %}
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
 {% endblock estilos %}
 {% block nombrePestana %}
     <title>Canal 13</title>
 {% endblock nombrePestana %}
 
 {% block contenido %}
-<div class="text">Grafo Canal 13</div>
-    <div class="row">
-        <div class="col-10">
-            <!--<iframe id="injection-graphXR-iframe-id"  origin="*"></iframe>-->
+<div class="mt-2 mb-2 text-center">Canal 13</div>
+<div class="cont s--inactive">
+    <!-- cont inner start -->
+    <div class="cont__inner">
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">D</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Whatever</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
         </div>
-        <div class="col-2 twits">
-            <h1>Datos</h1>
-            <h1>Positivos : 250</h1>
-            <h1>Neutral : 59</h1>
-            <h1>Negativos : 101</h1>
-            <h1>Cantidad de Twists : 410</h1>
-            <h1>Dia  : 30/07/2021</h1>
-            <br>
-            <h1>Top 1 #</h1>
-            <h1>Top 2 #</h1>
-            <h1>Top 3 #</h1>
-            <h1>Top 4 #</h1>
-            <h1>Top 5 #</h1>
+        <div class="el__index">
+          <div class="el__index-back">1</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="1">1</div>
+          </div>
         </div>
-        <div class="col-md-6 .offset-md-3">
-            <h1>Histograma Proximamente Disponible</h1>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">A</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Whatever</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
         </div>
-</div>
+        <div class="el__index">
+          <div class="el__index-back">2</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="2">2</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">T</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Whatever</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">3</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="3">3</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">O</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Whatever</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">4</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="4">4</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="el__heading">S</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Whatever</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">5</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="5">5</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+    </div>
+    <!-- cont inner end -->
+  </div>
+    <script src="{% static 'js/index.js'%}"></script>
+
 {% endblock contenido %}
 
 {% block js %}
