@@ -176,7 +176,7 @@
             "userId": "55cdafd4182f96cf440a3695",
             "username": "sonyamoisset"
         },
-        "image": "https://avatars1.githubusercontent.com/u/364727?v=3&amp;s=400",
+        "image": "https://avatars1.githubusercontent.com/u/364727?v=3&s=400",
         "storyLink": "essential javascript websites"
     },
     {
@@ -427,7 +427,7 @@
     },
     {
         "id": "5702738f41cd91811cf8bde6",
-        "headline": "The Best API Documentation — Thinking &amp;amp; typing — Medium",
+        "headline": "The Best API Documentation — Thinking &amp; typing — Medium",
         "timePosted": 1459778447028,
         "link": "https://bradfults.com/the-best-api-documentation-b9e46400379a#.4c71w5she",
         "metaDescription": "As a developer, I often need to make use of API documentation to understand how to use a service on which I want to depe…",
@@ -584,7 +584,7 @@
         "headline": "Loading and Using External Data in React",
         "timePosted": 1459712172002,
         "link": "http://mediatemple.net/blog/tips/loading-and-using-external-data-in-react/",
-        "metaDescription": "Hey JavaScripters! I&amp;#8217;ve been learning a bunch about React lately. It&amp;#8217;s very fun. It feels like a great way to write JavaScript. Seems to me it has almost...",
+        "metaDescription": "Hey JavaScripters! I&#8217;ve been learning a bunch about React lately. It&#8217;s very fun. It feels like a great way to write JavaScript. Seems to me it has almost...",
         "description": "undefined",
         "rank": 1,
         "upVotes": [
@@ -647,7 +647,7 @@
     },
     {
         "id": "5700836c9b16a42846a55d68",
-        "headline": "jQuery: stopwatch &amp;amp; countdown - JSFiddle",
+        "headline": "jQuery: stopwatch &amp; countdown - JSFiddle",
         "timePosted": 1459651436306,
         "link": "http://jsfiddle.net/ezmilhouse/v2s9d/",
         "metaDescription": "Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.",
@@ -801,7 +801,7 @@
     },
     {
         "id": "56fffe8841cd91811cf8bb63",
-        "headline": "Q&amp;amp;A: JavaScript creator Brendan Eich puts Brave face on the Web",
+        "headline": "Q&amp;A: JavaScript creator Brendan Eich puts Brave face on the Web",
         "timePosted": 1459617416300,
         "link": "http://www.infoworld.com/article/3048502/javascript/qa-javascript-creator-brendan-eich-puts-brave-face-on-the-web.html",
         "metaDescription": "Brendan Eich's latest project involves a browser that automatically blocks ads and trackers, protects user privacy\r\n\r\n",
@@ -1126,7 +1126,7 @@
             "userId": "5634ce38306a67d61c775526",
             "username": "brainyfarm"
         },
-        "image": "https://regmedia.co.uk/2015/06/17/source_code.jpg?x=1200&amp;y=794",
+        "image": "https://regmedia.co.uk/2015/06/17/source_code.jpg?x=1200&y=794",
         "storyLink": "no regrets says chap who felled javascripts jenga tower as devs ask have we forgo"
     },
     {
@@ -1302,7 +1302,7 @@
             "userId": "55a0fafad9e6d9240c6a3735",
             "username": "guptarohit"
         },
-        "image": "https://avatars0.githubusercontent.com/u/3576549?v=3&amp;s=400",
+        "image": "https://avatars0.githubusercontent.com/u/3576549?v=3&s=400",
         "storyLink": "github mvdaninterfacer a linter that suggests interface types"
     },
     {
@@ -1417,7 +1417,7 @@
     },
     {
         "id": "56fd3378fdcc1fbc1b8e01d4",
-        "headline": "Van Jones: &amp;quot;I Will Teach 100,000 Black Children Computer Coding&amp;quot; Via #YesWeCode",
+        "headline": "Van Jones: &quot;I Will Teach 100,000 Black Children Computer Coding&quot; Via #YesWeCode",
         "timePosted": 1459434360593,
         "link": "http://urbanintellectuals.com/2015/08/05/van-jones-i-will-teach-100000-black-children-computer-coding-via-his-program-yeswecode/",
         "metaDescription": "",
@@ -1505,7 +1505,7 @@
     },
     {
         "id": "56fd324d957b610c1dbe01e0",
-        "headline": "Code Avengers Review &amp;amp; Rating",
+        "headline": "Code Avengers Review &amp; Rating",
         "timePosted": 1459434061794,
         "link": "http://www.pcmag.com/article2/0,2817,2484770,00.asp",
         "metaDescription": "Code Avengers offers a small amount of classes, though more are added on occasion. Class quality is good, though more help resources would be nice.",
@@ -1527,7 +1527,7 @@
     },
     {
         "id": "56fd31f341cd91811cf8b7a0",
-        "headline": "Education &amp;amp; Reference Software List",
+        "headline": "Education &amp; Reference Software List",
         "timePosted": 1459433971183,
         "link": "http://www.pcmag.com/category2/0,2806,716981,00.asp",
         "metaDescription": "PC Magazine provides up-to-date coverage and product reviews of education and reference software",
@@ -1772,7 +1772,7 @@
             "userId": "55a0fafad9e6d9240c6a3735",
             "username": "guptarohit"
         },
-        "image": "https://avatars3.githubusercontent.com/u/1004115?v=3&amp;s=400",
+        "image": "https://avatars3.githubusercontent.com/u/1004115?v=3&s=400",
         "storyLink": "github ptmtreactnativedesktop react native for os x"
     },
     {
@@ -1887,7 +1887,7 @@
     },
     {
         "id": "56fa9670288d96271d71f5d7",
-        "headline": "How to reduce the cognitive load of your code – CODE &amp;amp; BLOG",
+        "headline": "How to reduce the cognitive load of your code – CODE &amp; BLOG",
         "timePosted": 1459263088122,
         "link": "http://chrismm.com/blog/how-to-reduce-the-cognitive-load-of-your-code/",
         "metaDescription": "",
@@ -1960,4 +1960,263 @@
         "headline": "Equality and Relational Operators: Comparing the strange relationship between null and 0",
         "timePosted": 1459293675930,
         "link": "https://bocoup.com/weblog/equality-and-relational-operators-comparing-the-strange-relationship-between-null-and-0",
-        "metaDescription":"Open Design &amp; Technology Services
+        "metaDescription": "Open Design & Technology Services for People Creating the Future",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "56ad2aaf3020c7a74e7043de",
+                "upVotedByUsername": "mikesprague"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/560705?v=3",
+            "userId": "56ad2aaf3020c7a74e7043de",
+            "username": "mikesprague"
+        },
+        "image": "",
+        "storyLink": "equality and relational operators comparing the strange relationship between null and 0"
+    },
+    {
+        "id": "56faed7c41cd91811cf8b3a1",
+        "headline": "It's A Great Time To Be A Programmer In Singapore Now",
+        "timePosted": 1459285372270,
+        "link": "https://vulcanpost.com/559891/great-time-programmer-singapore-now/",
+        "metaDescription": "",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5634ce38306a67d61c775526",
+                "upVotedByUsername": "brainyfarm"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11624587?v=3",
+            "userId": "5634ce38306a67d61c775526",
+            "username": "brainyfarm"
+        },
+        "image": "http://az598155.vo.msecnd.net/wp-uploads/2016/03/Screen-Shot-2016-03-29-at-12.57.37-pm.png",
+        "storyLink": "its a great time to be a programmer in singapore now"
+    },
+    {
+        "id": "56faecf3960b62491c59f710",
+        "headline": "How one programmer broke the internet by deleting a tiny piece of code - Quartz",
+        "timePosted": 1459285235874,
+        "link": "http://www.qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code",
+        "metaDescription": "A man in Oakland, California, disrupted web development around the world last week by deleting 11 lines of code. The story of how 28-year-old Azer Koçulu briefly broke the internet shows how writing software for the web has become dependent on a patchwork of code that itself relies on the benevolence of fellow programmers. When that system breaks down, as it did last week, the consequences...",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5634ce38306a67d61c775526",
+                "upVotedByUsername": "brainyfarm"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11624587?v=3",
+            "userId": "5634ce38306a67d61c775526",
+            "username": "brainyfarm"
+        },
+        "image": "https://qzprod.files.wordpress.com/2016/03/screen-shot-2016-03-25-at-7-28-34-pm.png?w=1600",
+        "storyLink": "how one programmer broke the internet by deleting a tiny piece of code quartz 2"
+    },
+    {
+        "id": "56faeccafdcc1fbc1b8dfd93",
+        "headline": "How one programmer broke the internet by deleting a tiny piece of code - Quartz",
+        "timePosted": 1459285194561,
+        "link": "http://www.qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code",
+        "metaDescription": "A man in Oakland, California, disrupted web development around the world last week by deleting 11 lines of code. The story of how 28-year-old Azer Koçulu briefly broke the internet shows how writing software for the web has become dependent on a patchwork of code that itself relies on the benevolence of fellow programmers. When that system breaks down, as it did last week, the consequences...",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5634ce38306a67d61c775526",
+                "upVotedByUsername": "brainyfarm"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11624587?v=3",
+            "userId": "5634ce38306a67d61c775526",
+            "username": "brainyfarm"
+        },
+        "image": "https://qzprod.files.wordpress.com/2016/03/screen-shot-2016-03-25-at-7-28-34-pm.png?w=1600",
+        "storyLink": "how one programmer broke the internet by deleting a tiny piece of code quartz 1"
+    },
+    {
+        "id": "56faeca551cb56661cfeec9d",
+        "headline": "How one programmer broke the internet by deleting a tiny piece of code - Quartz",
+        "timePosted": 1459285157994,
+        "link": "http://www.qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code",
+        "metaDescription": "A man in Oakland, California, disrupted web development around the world last week by deleting 11 lines of code. The story of how 28-year-old Azer Koçulu briefly broke the internet shows how writing software for the web has become dependent on a patchwork of code that itself relies on the benevolence of fellow programmers. When that system breaks down, as it did last week, the consequences...",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5634ce38306a67d61c775526",
+                "upVotedByUsername": "brainyfarm"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11624587?v=3",
+            "userId": "5634ce38306a67d61c775526",
+            "username": "brainyfarm"
+        },
+        "image": "https://qzprod.files.wordpress.com/2016/03/screen-shot-2016-03-25-at-7-28-34-pm.png?w=1600",
+        "storyLink": "how one programmer broke the internet by deleting a tiny piece of code quartz"
+    },
+    {
+        "id": "56faeae351cb56661cfeec92",
+        "headline": "Streamline Your Coding Workflow &amp; Become a Better Programmer",
+        "timePosted": 1459284707538,
+        "link": "http://www.sitepoint.com/streamline-your-coding-workflow-become-a-better-programmer/",
+        "metaDescription": "",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5634ce38306a67d61c775526",
+                "upVotedByUsername": "brainyfarm"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11624587?v=3",
+            "userId": "5634ce38306a67d61c775526",
+            "username": "brainyfarm"
+        },
+        "image": "http://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.offers.png",
+        "storyLink": "streamline your coding workflow become a better programmer"
+    },
+    {
+        "id": "56faca75288d96271d71f65c",
+        "headline": "A CSS Multi-column Layout Tutorial for Beginners",
+        "timePosted": 1459276405465,
+        "link": "http://www.sitepoint.com/css-multi-column-layout-tutorial-for-beginners/?utm_campaign=CSS%2BLayout%2BNews&utm_medium=email&utm_source=CSS_Layout_News_35",
+        "metaDescription": "Baljeet Rathi introduces the different properties that make up the CSS Multi-column layout module, and how they can be used in responsive designs.",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "54fe05dc61db280b0051df92",
+                "upVotedByUsername": "michael-morris-1"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/12566878?v=3",
+            "userId": "54fe05dc61db280b0051df92",
+            "username": "michael-morris-1"
+        },
+        "image": "http://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.html-css.png",
+        "storyLink": "a css multicolumn layout tutorial for beginners"
+    },
+    {
+        "id": "56fab891fdcc1fbc1b8dfd06",
+        "headline": "How to cope with programming fatigue",
+        "timePosted": 1459271825182,
+        "link": "http://webuilddesign.com/how-to-cope-with-programming-fatigue/",
+        "metaDescription": "",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "5622901af33489a97b48f92c",
+                "upVotedByUsername": "webuilddesign"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/11021764?v=3",
+            "userId": "5622901af33489a97b48f92c",
+            "username": "webuilddesign"
+        },
+        "image": "http://webuilddesign.com/wp-content/uploads/2016/03/programmer-fatique.jpg",
+        "storyLink": "how to cope with programming fatigue"
+    },
+    {
+        "id": "56fab377960b62491c59f670",
+        "headline": "Can Anyone Really Learn How to Code? | Coding Dojo Blog",
+        "timePosted": 1459270519678,
+        "link": "http://www.codingdojo.com/blog/can-anyone-learn-how-to-code/",
+        "metaDescription": "Coding Dojo's founder Michael Choi shares his insights on whether someone can learn programming if they initially lack the \"aptitude\" for it.",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "562afeec4425cde00453e355",
+                "upVotedByUsername": "cannelflow"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/12219251?v=3",
+            "userId": "562afeec4425cde00453e355",
+            "username": "cannelflow"
+        },
+        "image": "http://www.codingdojo.com/blog/wp-content/uploads/can-anyone-learn-how-to-code.jpg",
+        "storyLink": "can anyone really learn how to code coding dojo blog"
+    },
+    {
+        "id": "56fa96a8957b610c1dbdfd14",
+        "headline": "Tell Congress: It’s Time to Move FASTR | Electronic Frontier Foundation",
+        "timePosted": 1459263144434,
+        "link": "https://www.eff.org/deeplinks/2016/03/tell-congress-its-time-move-fastr",
+        "metaDescription": "Publicly Funded Research Should Be Publicly Available",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "55a0fafad9e6d9240c6a3735",
+                "upVotedByUsername": "guptarohit"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/7895001?v=3",
+            "userId": "55a0fafad9e6d9240c6a3735",
+            "username": "guptarohit"
+        },
+        "image": "https://www.eff.org/files/2015/10/20/open-share-fastr.png",
+        "storyLink": "tell congress its time to move fastr electronic frontier foundation 1"
+    },
+    {
+        "id": "56fa966541cd91811cf8b2b2",
+        "headline": "Too much of a good thing | The Economist",
+        "timePosted": 1459263077737,
+        "link": "http://www.economist.com/news/briefing/21695385-profits-are-too-high-america-needs-giant-dose-competition-too-much-good-thing",
+        "metaDescription": "Profits are too high. America needs a giant dose of competition",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "55a0fafad9e6d9240c6a3735",
+                "upVotedByUsername": "guptarohit"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/7895001?v=3",
+            "userId": "55a0fafad9e6d9240c6a3735",
+            "username": "guptarohit"
+        },
+        "image": "http://cdn.static-economist.com/sites/default/files/cf_images/images-magazine/2016/03/26/FB/20160326_FBD001_facebook.jpg",
+        "storyLink": "too much of a good thing the economist"
+    },
+    {
+        "id": "56fa95a941cd91811cf8b2ae",
+        "headline": "Tell Congress: It’s Time to Move FASTR | Electronic Frontier Foundation",
+        "timePosted": 1459262889954,
+        "link": "https://www.eff.org/deeplinks/2016/03/tell-congress-its-time-move-fastr",
+        "metaDescription": "Publicly Funded Research Should Be Publicly Available",
+        "description": "undefined",
+        "rank": 1,
+        "upVotes": [
+            {
+                "upVotedBy": "55a0fafad9e6d9240c6a3735",
+                "upVotedByUsername": "guptarohit"
+            }
+        ],
+        "author": {
+            "picture": "https://avatars.githubusercontent.com/u/7895001?v=3",
+            "userId": "55a0fafad9e6d9240c6a3735",
+            "username": "guptarohit"
+        },
+        "image": "https://www.eff.org/files/2015/10/20/open-share-fastr.png",
+        "storyLink": "tell congress its time to move fastr electronic frontier foundation"
+    }
+]
