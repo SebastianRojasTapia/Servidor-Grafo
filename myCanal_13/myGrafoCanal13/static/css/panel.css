@@ -45,14 +45,14 @@
   
   
   #content1 {
-	background: #36363c;
+	background: #fff;
 	grid-area: content1;
 	border-radius: var(--main-radius);
 	padding-top: var(--main-padding);
   }
   
   #content2 {
-	background: #36363c;
+	background: #fff;
 	grid-area: content2;
 	border-radius: var(--main-radius);
 	padding-top: var(--main-padding);
@@ -71,6 +71,13 @@
     text-transform: uppercase;
     transition: transform 80ms ease-in;
 }
+
+/* Prueba */
+#message {
+	text-align: center;
+	font-size: 12em;
+  }
+  
   
   @media only screen and (max-width: 750px) {
 	.container-panel {

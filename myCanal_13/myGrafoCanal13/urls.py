@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import index,login,logout_vista,carga,red,panel
+from .views import index,login,logout_vista,carga,red,panel,prueba
 
 urlpatterns = [
     path('', login, name='LOGIN'),
