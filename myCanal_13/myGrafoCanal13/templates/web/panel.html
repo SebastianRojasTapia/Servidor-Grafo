@@ -1,49 +1,84 @@
 {% extends "web/base.html" %}
 {% load static %}}
 {% block estilos %}
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/vega@5.4.0/build/vega.min.js"></script>
-  <script src="https://unpkg.com/vega-lite@4.0.0-beta.1/build/vega-lite.min.js"></script>
-  <script src="https://unpkg.com/vega-lite-api@0.1.0/build/vega-lite-api.min.js"></script>
-  <script src="https://unpkg.com/vega-tooltip@0.19.1/build/vega-tooltip.min.js"></script>
-  <script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
-  <link rel="stylesheet" href="{% static 'css/panel.css'%}">
+<link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/vega@5.4.0/build/vega.min.js"></script>
+<script src="https://unpkg.com/vega-lite@4.0.0-beta.1/build/vega-lite.min.js"></script>
+<script src="https://unpkg.com/vega-lite-api@0.1.0/build/vega-lite-api.min.js"></script>
+<script src="https://unpkg.com/vega-tooltip@0.19.1/build/vega-tooltip.min.js"></script>
+<script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/panel.css'%}">
 {% endblock estilos %}
 {% block nombrePestana %}
-    <title>Panel</title>
+<title>Panel</title>
 {% endblock nombrePestana %}
 {% block contenido %}
-  <div class="container-panel">
-    <nav>
+<div class="container-panel">
+  <nav>
     <h1>Twists-Time</h1>
-    </nav>
-    <main>
-      <div class="row">
-        <div class="col-6 mt-3">
-          <form action="{% url 'P'%}" method="POST" class="inicio" id="inicio">
-            {% csrf_token %}
-            <button type="submit" class="btn">Iniciar Tiempo</button>
-          </form>
-        </div>
-        <div class="col-6 mt-3">
-          <form action="{% url 'P'%}" method="POST" class="detener" id="detener">
-            {% csrf_token %}
-            <button type="submit" class="btn">Detener Tiempo</button>
-          </form>
-        </div>
+  </nav>
+  <main>
+    <div class="row">
+      <div class="col-6 mt-3">
+        <form action="{% url 'P'%}" method="POST" class="inicio" id="inicio">
+          {% csrf_token %}
+          <button type="submit" class="btn">Iniciar Tiempo</button>
+        </form>
       </div>
-    </main>
-    <div id="content1">GRAFICO
-      <div id="grafico1"></div>
+      <div class="col-6 mt-3">
+        <form action="{% url 'P'%}" method="POST" class="detener" id="detener">
+          {% csrf_token %}
+          <button type="submit" class="btn">Detener Tiempo</button>
+        </form>
+      </div>
     </div>
-    <div id="content2">GRAFICO
-      <div id="grafico2"></div>
+  </main>
+  <div id="content1">GRAFICO
+    <div id="grafico1"></div>
+    <div class="col-12 text-center">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+        </label>
+      </div>
+    
     </div>
-  </div>	  
-  <script src="{% static 'js/prueba/bundle.js'%}"></script>
+  </div>
+  <div id="content2">GRAFICO
+    <div id="grafico2"></div>
+    <div class="col-12 text-center">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/prueba/bundle.js'%}"></script>
 {% endblock contenido %}
 
 {% block js %}
-    <!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
-    <script src="{% static 'js/menu.js'%}"></script>
+<!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
+<script src="{% static 'js/menu.js'%}"></script>
 {% endblock js %}

@@ -20,7 +20,7 @@
 	font-weight: 800;
 	text-transform: uppercase;
 	font-size: 12px;
-	color: #004d40;
+	color: #fb6900;
 	text-align: center;
 	margin: 15px;
   }
@@ -71,6 +71,50 @@
     text-transform: uppercase;
     transition: transform 80ms ease-in;
 }
+
+#positivo{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(1, 184, 56);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #positivo:checked{
+	background-color:rgb(1, 184, 56);
+  }
+  #negativo{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(231, 40, 6);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #negativo:checked{
+	background-color:rgb(231, 40, 6);
+  }
+
+  #neutro{
+	border:2px solid white;
+	box-shadow:0 0 0 1px rgb(114, 107, 107);
+	appearance:none;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	background-color:#fff;
+	transition:all ease-in 0.2s;
+  
+  }
+  #neutro:checked{
+	background-color:rgb(114, 107, 107);
+  }
 
 /* Prueba */
 #message {

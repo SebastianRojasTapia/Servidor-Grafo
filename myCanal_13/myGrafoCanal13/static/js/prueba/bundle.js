@@ -5,7 +5,7 @@
   vegaLite = vegaLite && Object.prototype.hasOwnProperty.call(vegaLite, 'default') ? vegaLite['default'] : vegaLite;
   vl = vl && Object.prototype.hasOwnProperty.call(vl, 'default') ? vl['default'] : vl;
 
-  const csvUrl = 'https://gist.githubusercontent.com/HiImSebastian/d8fb2b8c2392308ef87a414228f39a45/raw/abc7de08559a688a4d110449aeb0353d88fb21c1/LI_concatenado.csv';
+  const csvUrl = 'myCanal_13/myGrafoCanal13/static/json/LI_concatenado.csv';
   const getData = async () => {
     const data = await d3.csv(csvUrl);
     console.log(data[0]);

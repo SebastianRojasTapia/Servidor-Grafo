@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,logout,login as login_autent
 #agregar decorador para impedir el ingreso a las paginas sin estar registrado
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.files.storage import FileSystemStorage
+
+
 
 import tweepy
 import json
@@ -50,6 +53,10 @@ def index(request):
 
 @login_required(login_url='/login/')
 def carga(request):
+    if request.method == 'POST':
+        uploaded_file = request.FILES['document']
+        fs = FileSystemStorage()
+        fs.save(uploaded_file.name, uploaded_file)
     return render(request,'web/carga.html')
 
 @login_required(login_url='/login/')
@@ -67,7 +74,7 @@ def panel(request):
         streamingApi=tweepy.Stream(auth=api.auth,listener=stream)
         streamingApi.filter(
             locations=[-82.894652146,-56.1959888356,-64.2317965251,13.5111203983],
-            track = {'T13','13','Chile'}),
+            track = {'T13','Chile'}),
             
         data={
             'tweest':stream}
