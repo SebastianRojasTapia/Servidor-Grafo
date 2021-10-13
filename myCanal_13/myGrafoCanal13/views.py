@@ -6,30 +6,14 @@ from django.contrib.auth import authenticate,logout,login as login_autent
 #agregar decorador para impedir el ingreso a las paginas sin estar registrado
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.files.storage import FileSystemStorage
-
-
-
+from .functions import *
+from .queries import *
+import pyodbc
 import tweepy
 import json
 from sentiment_analysis_spanish import sentiment_analysis
 
 from .key import *
-
-sentiment = sentiment_analysis.SentimentAnalysisSpanish()
-
-# Create your views here.
-
-class TweetsListener(tweepy.StreamListener):
-    def on_connect(self):
-      print ("Estoy Conectado!")
-    
-    def on_status(self,status):
-      print (status.created_at,status.text,status.source)
-
-    def on_error(self,status_code):
-      print ("Error", status_code)
-
-
 
 def logout_vista(request):
     logout(request)
@@ -57,6 +41,15 @@ def carga(request):
         uploaded_file = request.FILES['document']
         fs = FileSystemStorage()
         fs.save(uploaded_file.name, uploaded_file)
+        print('C:\\Users\\sebas\\Downloads\\Servidor Grafo\\myCanal_13\\media\\{0}'.format(uploaded_file.name))
+        if (uploaded_file.name == "LI_concatenado.csv"):
+            print('\n--- CARGA DE LISTENING INSIGHTS ---\n')
+            df = cleanListeningInsights(r'C:\Users\sebas\Downloads\Servidor Grafo\myCanal_13\media\{0}'.format(uploaded_file))
+            print(cargarData(df, file_type='listeningInsights'))
+        if (uploaded_file.name == "post_performance.csv"):
+            print('\n--- CARGA DE POST PERFORMANCE ---\n')
+            df_2 = cleanPostPerformance(r'C:\Users\sebas\Downloads\Servidor Grafo\myCanal_13\media\{0}'.format(uploaded_file))
+            print(cargarData(df_2, file_type = 'postPerformance'))
     return render(request,'web/carga.html')
 
 @login_required(login_url='/login/')
@@ -65,19 +58,19 @@ def red(request):
 
 @login_required(login_url='/login/')
 def panel(request):
-    
-    if request.POST:
-        auth = tweepy.OAuthHandler(API_KEY,API_SECRET_KEY)
-        auth.set_access_token(ACCESS_TOKEN,ACCESS_TOKEN_SECRET)
-        api = tweepy.API(auth,wait_on_rate_limit_notify=True, wait_on_rate_limit=True)
-        stream = TweetsListener()
-        streamingApi=tweepy.Stream(auth=api.auth,listener=stream)
-        streamingApi.filter(
-            locations=[-82.894652146,-56.1959888356,-64.2317965251,13.5111203983],
-            track = {'T13','Chile'}),
-            
-        data={
-            'tweest':stream}
-        return render(request,'web/panel.html',data)
     return render(request,'web/panel.html')
+
+@login_required(login_url='/login/')
+def panelFacebook(request):
+    data = Grafico_engagement_date().get_data('facebook')
+    print(data)
+    return render(request,'web/panelFacebook.html',  {"my_data": data})
+
+@login_required(login_url='/login/')
+def panelInstagram(request):
+    return render(request,'web/panelInstagram.html')
+
+@login_required(login_url='/login/')
+def panelTwitter(request):
+    return render(request,'web/panelTwitter.html')
 

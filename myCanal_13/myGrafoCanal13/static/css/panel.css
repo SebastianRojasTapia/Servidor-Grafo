@@ -14,8 +14,8 @@
 	grid-template-rows: 0.2fr 1.5fr 1.2fr;
 	grid-template-areas:
 	  "nav nav"
-	  "main main"
-	  "content1 content2";
+	  "content1 content2"
+	  "content3 content3";
 	grid-gap: 0.6rem;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -54,6 +54,13 @@
   #content2 {
 	background: #fff;
 	grid-area: content2;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+
+  #content3{
+	background: #fff;
+	grid-area: content3;
 	border-radius: var(--main-radius);
 	padding-top: var(--main-padding);
   }
@@ -122,20 +129,20 @@
 	font-size: 12em;
   }
   
-  
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 1250px) {
 	.container-panel {
 	  grid-template-columns: 1fr;
-	  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+	  grid-template-rows: 0.5fr 1fr;
 	  grid-template-areas:
 		"nav"
-		"main"
 		"content1"
-		"content2";
+		"content2"
+		"content3";
 	}
-
 	button.btn{
 		width: 20%;
 	}
+
+	
   }
   

@@ -5,13 +5,6 @@
   vegaLite = vegaLite && Object.prototype.hasOwnProperty.call(vegaLite, 'default') ? vegaLite['default'] : vegaLite;
   vl = vl && Object.prototype.hasOwnProperty.call(vl, 'default') ? vl['default'] : vl;
 
-  const csvUrl = 'myCanal_13/myGrafoCanal13/static/json/LI_concatenado.csv';
-  const getData = async () => {
-    const data = await d3.csv(csvUrl);
-    console.log(data[0]);
-    return data;
-  };
-
   // Appearance customization to improve readability.
   // See https://vega.github.io/vega-lite/docs/
   const dark = '#3e3c38';
@@ -22,40 +15,109 @@
     },
     style: {
       "guide-label": {
-        fontSize: 15,
+        fontSize: 13,
         fill: dark
       },
       "guide-title": {
-        fontSize: 20,
+        fontSize: 17,
         fill: dark
       }
     }
   };
+  let inf = window.data
 
-  const circles = vl
-    .markPoint({ opacity: 0.8 })
+  //'https://gist.githubusercontent.com/Sebans31/9c6838ad91acf03537a75ec4ba54910e/raw/c402b5da25a0c588b804f2eceab7c43ef74e1ab3/PostPerformance.csv';
+  const csvUrl = inf;
+  
+ 
+  console.log("Esta es la info")
+  console.log(inf)
+
+  // función para cargar el data del csv
+  const getData = async () => {
+    const data = await d3.csv(csvUrl);
+    return data;
+  };
+
+
+  // subquery de data por red social
+  const getDataFrom = async (network) => {
+  	const data = await getData();
+    console.log(data[0]);
+  	return data.filter(d => d['Network'] == network);
+  };
+
+
+  // funcion para extraer columnas
+  // const extractColumn = (arr, column) => arr.map(x=>x[column]);
+  // const twoDimensionalArray = nodes.map((node) => [node.x, node.y]);
+  // const picked = (({ a, c }) => ({ a, c }))(object);
+
+
+  const getDataFromColumns = async (network) => {
+  	const data = await getData();
+  	const dataNetwork = data.filter(d => d['Network'] == network);
+    console.log(data[0]);
+    const picked = (({ Date, Likes }) => ({ Date, Likes }))(data[0]);
+    console.log(picked);
+  	const dataPicked = dataNetwork.map(d => (({Date, Likes, Engagements, Post}) => ({Date, Likes, Engagements, Post}))(d));
+    console.log(dataPicked);
+    return dataPicked;
+    
+  };
+
+  const getGraph = async (data) => {
+    
+    const x = vl.x().fieldT('Date').title(null);
+    const y = vl.y().fieldQ('Likes');
+    const width = 500;
+    
+    const brush = vl.selectInterval().encodings('x');
+    const selector = vl
+    	.markBar({color:'#fb6900'})
+    	.encode(x, y)
+    	.width(width);
+
+
+  	const grafico = vl
+    .markCircle({ opacity: 0.5})
+  	.transform(vl.filter(brush))
     .encode(
-      vl.x().fieldT('Date').timeUnit('daymonth'),
-      vl.y().fieldN('Network'),
-      vl.color().fieldN('Sentiment'),
-      vl.size().fieldQ('Likes').scale({domain: [0, 3000]}),
-      vl.tooltip().fieldQ('Likes'),
-    );
+      x, y,
+      vl.color().fieldQ('Engagements').scale({range :['blue', '#fb6900', 'yellow']}),
+      vl.size().fieldQ('Engagements').scale({range : [30, 1000]}),
+      vl.tooltip([
+        x,
+        vl.fieldN('Engagements'),
+        vl.fieldN('Post'),
+      ]))
+    	.width(width)
+      .height(width)
+      .autosize({ type: 'fit', contains: 'padding' })
+      .config(config);
+    
+    
+  	const g = vl.data(data)
+      .vconcat(
+        grafico.encode( x.scale({domain: brush}) ),
+        selector.select(brush).height(60),
+      );
+    return g;
+  };
 
-  const circles2 = vl
-    .markCircle({
-      //fill: true,
-      stroke: true,
-      //size: 10,
-      opacity: 0.6
-    })
+
+  const g2 = vl
+    .markLine({ size : 1 })
     .encode(
       vl.x().fieldT('Date').timeUnit("date"),
-      vl.y().fieldN('Network'),
-      vl.size().fieldQ('Likes').scale({domain: [0 , 3000]}),
+      vl.y().fieldQ('Likes').aggregate('average'),
       vl.color().fieldN('Sentiment'),
       vl.tooltip().fieldT('Date').timeUnit('date')
     );
+
+  // import { message } from './myMessage';
+
+
 
   vl.register(vega, vegaLite, {
     view: { renderer: 'canvas' },
@@ -63,22 +125,20 @@
   });
 
   const run = async () => {
-    const marks = circles
-      .data(await getData())
-      .width(900)
-      .height(500)
-      .autosize({ type: 'fit', contains: 'padding' })
-      .config(config);
     
-  	const marks2 = circles2
-      .data(await getData())
-      .width(900)
-      .height(500)
-      .autosize({ type: 'fit', contains: 'padding' })
-      .config(config);
+    // data
+    const twitter = await getDataFromColumns('Twitter');
     
-    document.getElementById("grafico1").appendChild(await marks.render());
-    document.getElementById("grafico2").appendChild(await marks2.render());
+    const facebook2 = await getDataFromColumns('Facebook');
+    const facebook = await getDataFrom('Facebook');
+    const instagram = await getDataFrom('Instagram');
+    
+    const graph = await getGraph(twitter);
+    const graph_1 = await getGraph(instagram);
+
+  	document.getElementById("grafico1").appendChild(await graph.render());
+    document.getElementById("grafico2").appendChild(await graph_1.render());
+    
   };
 
 

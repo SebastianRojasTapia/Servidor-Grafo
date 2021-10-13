@@ -13,28 +13,36 @@
 <title>Panel</title>
 {% endblock nombrePestana %}
 {% block contenido %}
-<div class="container-panel">
-  <nav>
-    <h1>Twists-Time</h1>
-  </nav>
-  <main>
-    <div class="row">
-      <div class="col-6 mt-3">
-        <form action="{% url 'P'%}" method="POST" class="inicio" id="inicio">
-          {% csrf_token %}
-          <button type="submit" class="btn">Iniciar Tiempo</button>
-        </form>
-      </div>
-      <div class="col-6 mt-3">
-        <form action="{% url 'P'%}" method="POST" class="detener" id="detener">
-          {% csrf_token %}
-          <button type="submit" class="btn">Detener Tiempo</button>
-        </form>
+
+<div class="container-fluid mt-5">
+  <h2 class="mb-5 text-center">Grafico Canal 13</h2>
+  <div class="row">
+    <div class="col-xl-6 text-center">
+      <h2>Grafico Twitter</h2>
+      <div id="grafico1"></div>
+      
+      <div class="col-12 text-center">
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+          </label>
+        </div>
       </div>
     </div>
-  </main>
-  <div id="content1">GRAFICO
-    <div id="grafico1"></div>
+    <div class="col-xl-6 text-center">
+      <h2>Grafico Instagram</h2>
+      <div id="grafico2"></div>
+      
     <div class="col-12 text-center">
       <div class="form-check-inline">
         <label class="form-check-label">
@@ -51,30 +59,11 @@
           <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
         </label>
       </div>
-    
     </div>
-  </div>
-  <div id="content2">GRAFICO
-    <div id="grafico2"></div>
-    <div class="col-12 text-center">
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
-        </label>
-      </div>
     </div>
   </div>
 </div>
+
 <script src="{% static 'js/prueba/bundle.js'%}"></script>
 {% endblock contenido %}
 

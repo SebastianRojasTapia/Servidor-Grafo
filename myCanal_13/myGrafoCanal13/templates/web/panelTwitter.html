@@ -1,0 +1,73 @@
+{% extends "web/base.html" %}
+{% load static %}}
+{% block estilos %}
+<link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/vega@5.4.0/build/vega.min.js"></script>
+<script src="https://unpkg.com/vega-lite@4.0.0-beta.1/build/vega-lite.min.js"></script>
+<script src="https://unpkg.com/vega-lite-api@0.1.0/build/vega-lite-api.min.js"></script>
+<script src="https://unpkg.com/vega-tooltip@0.19.1/build/vega-tooltip.min.js"></script>
+<script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/panel.css'%}">
+{% endblock estilos %}
+{% block nombrePestana %}
+<title>Panel Twitter</title>
+{% endblock nombrePestana %}
+{% block contenido %}
+
+<div class="container-fluid mt-5">
+  <h2 class="mb-5 text-center">Grafico de Twitter</h2>
+  <div class="row">
+    <div class="col-xl-6 text-center">
+      <h2>Grafico Twitter</h2>
+      <div id="grafico1"></div>
+      
+      <div class="col-12 text-center">
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6 text-center">
+      <h2>Grafico Twitter</h2>
+      <div id="grafico2"></div>
+      
+    <div class="col-12 text-center">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+        </label>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/prueba/bundle.js'%}"></script>
+{% endblock contenido %}
+
+{% block js %}
+<!--<script src="{% static 'js/graphXR.injection.js'%}"></script>-->
+<script src="{% static 'js/menu.js'%}"></script>
+{% endblock js %}

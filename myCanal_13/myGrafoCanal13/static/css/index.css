@@ -268,7 +268,7 @@
   }
   .el:nth-child(1) .el__bg:before {
     transition-delay: 0s;
-    background-image: url("https://ak.picdn.net/shutterstock/videos/1065378313/thumb/8.jpg");
+    background-image: url("https://barricada.com.ni/wp-content/uploads/2021/08/WhatsApp-Image-2021-08-17-at-11.56.18.jpeg");
   }
   .el:nth-child(2) {
     transform: translate3d(105.2083333333%, 0, 0);
@@ -287,7 +287,7 @@
   }
   .el:nth-child(2) .el__bg:before {
     transition-delay: 0.1s;
-    background-image: url("https://p4.wallpaperbetter.com/wallpaper/540/700/51/raw-data-4k-background-pic-wallpaper-preview.jpg");
+    background-image: url("https://www.teahub.io/photos/full/209-2090875_informatica-fondos-de-pantalla-hd.jpg");
   }
   .el:nth-child(3) {
     transform: translate3d(210.4166666667%, 0, 0);
@@ -306,7 +306,7 @@
   }
   .el:nth-child(3) .el__bg:before {
     transition-delay: 0.2s;
-    background-image: url("https://ak.picdn.net/shutterstock/videos/10733540/thumb/1.jpg");
+    background-image: url("https://fondosmil.com/fondo/12534.jpg");
   }
   .el:nth-child(4) {
     transform: translate3d(315.625%, 0, 0);
@@ -377,4 +377,11 @@
     left: auto;
     right: 5px;
   }
-  
+
+
+@media only screen and (max-width: 800px) {
+
+  .el__heading{
+    font-size: 150px;
+  }
+}

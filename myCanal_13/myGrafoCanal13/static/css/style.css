@@ -346,3 +346,30 @@ iframe{
     font-size: 15px;
     color: white;
 }
+
+.social ul a{
+    color: #fb6900;
+    font-size: 55px;
+}
+  
+.social ul a:hover{
+    color: #2f3840;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .social ul a{
+        font-size: 30px;
+    }
+      
+    .col-6.duoc img{
+        width: 100%;
+        height: 40%;
+    }
+
+    .col-6.canal img{
+        width: 100px;
+        height: 100px;
+    }
+}

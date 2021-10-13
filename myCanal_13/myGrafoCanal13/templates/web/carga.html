@@ -10,22 +10,85 @@
 <title>Carga de datos</title>
 {% endblock nombrePestana %}
 {% block contenido %}
-<div class="row">
-  <div class="col"></div>
-  <div class="col-sm-6 col-md-6 mt-5 text-center">
-    <h2>Subir Archivos</h2>
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      <label for="file-upload" class="subir">
-        <i class="fas fa-cloud-upload-alt"></i> Subir archivo
-      </label>
-      <input id="file-upload" onchange='cambiar()' type="file" name="document" style='display: none;' required>
-      <div id="info"></div>
-      <button type="submit" class="btn mt-3">subir archivo</button>
-    </form>
+
+<div class="container">
+  <h1>Resumen de la Carga de Datos</h1>
+  <h4>Seleccionar el archivo<i> Haciendo Click en carga</i></h4>
+    <ul class="timeline">
+        <li class="timeline">
+          <div class="icon done"></div>
+          <details class="panel">
+            <summary>Seleciona un archivo valido</summary>
+            <p><strong>Usuario:</strong> Que archivo es valido<br><br>
+            <strong>Sistema:</strong> La carga funcionara efectiva cuando el archivo tenga un nombre adecuado ya sea listeningInsights o postPerformance ademas de ser csv - json - xls</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon done"></div>
+          <details class="panel">
+            <summary>Obteniendo el archivo valido</summary>
+            <p>Selecciona el boton cargar en la ventana emergente</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon done"></div>
+          <details class="panel">
+            <summary>Una vez presionado el boton cargar</summary>
+            <p>Se debe hacer click el boton "Subir Archivo"</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon working"></div>
+          <details class="panel">
+            <summary>Luego de hacer click procesaremos tu información</summary>
+            <p>Esto puede llevar un tiempo ya que la magnitud de los datos que se esta procesando a cada segundo es GIGANTESCO!!!!</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon done"></div>
+          <details class="panel">
+            <summary>Como sabemos que estan cargado los datos</summary>
+            <p>Una vez que carguemos lo datos, en la parte superior de la pagina web en la pestaña se encuentra un objeto cargando este dejara de carga una vez que termine todo el proceso.</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon error"></div>
+          <details class="panel">
+            <summary>Ohh se obtuvo un error :c </summary>
+            <p>No te preocupes puedes repetir el proceso con unos click y podras subir toda la información. Para nosotros es muy importante proteger tu datos en nuestra pagina web. puedes navegar seguro.</p>
+          </details>
+        </li>
+        <li class="timeline">
+          <div class="icon done"></div>
+          <details class="panel">
+            <summary>Disfrutraa!!!</summary>
+            <p>Ahora podras navegar por nuestra pagina accediendo a los paneles que te ofreceran graficos con tu información procesada. Estamos trabajando para usted para entregar un mejor servicio y seguridad.</p>
+          </details>
+        </li>
+    </ul>
+    <div class="row">
+    <div class="col"></div>
+    <div class="col-sm-6 col-md-6 mt-5 text-center">
+      <h2>Subir Archivos</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file-upload" class="subir">
+          <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+        </label>
+        <input id="file-upload" onchange='return Init()' type="file" name="document" style='display: none;' required>
+        <div id="info"></div>
+        <div id="imagePreview"></div>
+        <button type="submit" class="btn mt-3">subir archivo</button>
+      </form>
+    </div>
+    <div class="col"></div>
   </div>
-  <div class="col"></div>
 </div>
+
+
+
+
+
 {% endblock contenido %}
 
 {% block js %}

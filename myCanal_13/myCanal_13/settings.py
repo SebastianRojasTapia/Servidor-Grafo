@@ -81,8 +81,15 @@ WSGI_APPLICATION = 'myCanal_13.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'canal13',
+        'USER': 'sa',
+        'PASSWORD':'system',
+        'HOST':'localhost',
+        'PORT':'',
+        'OPTIONS':{
+            'driver': 'ODBC Driver 13 for SQL Server'
+        }
     }
 }
 
