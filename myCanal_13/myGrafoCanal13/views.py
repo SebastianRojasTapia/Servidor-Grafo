@@ -10,7 +10,7 @@ from .functions import *
 from .queries import *
 import pyodbc
 import tweepy
-import json
+from json import dumps
 from sentiment_analysis_spanish import sentiment_analysis
 
 from .key import *
@@ -64,13 +64,17 @@ def panel(request):
 def panelFacebook(request):
     data = Grafico_engagement_date().get_data('facebook')
     print(data)
-    return render(request,'web/panelFacebook.html',  {"my_data": data})
+    return render(request,'web/panelFacebook.html', )
 
 @login_required(login_url='/login/')
 def panelInstagram(request):
-    return render(request,'web/panelInstagram.html')
+    data = Grafico_engagement_date().get_data('instagram')
+    print(data)
+    return render(request,'web/panelInstagram.html',  {"data": data})
 
 @login_required(login_url='/login/')
 def panelTwitter(request):
-    return render(request,'web/panelTwitter.html')
+    data = Grafico_engagement_date().get_data('twitter')
+    print(data)
+    return render(request,'web/panelTwitter.html',  {"data": data})
 

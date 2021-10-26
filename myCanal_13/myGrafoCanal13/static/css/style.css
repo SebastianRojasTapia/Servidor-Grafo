@@ -67,7 +67,7 @@ iframe{
 .siderbar #btn{
     position: absolute;
     color: #fff;
-    left: 50%;
+    left: 55%;
     top: 6px;
     font-size: 20px;
     height: 50px;
@@ -75,6 +75,7 @@ iframe{
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .siderbar.active #btn{

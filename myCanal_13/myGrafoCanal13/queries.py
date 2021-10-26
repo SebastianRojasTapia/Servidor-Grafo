@@ -4,9 +4,11 @@
 3 - sentimiento de Hashtags, nube de palabras, porcentajes, tweets, volumen de tweets, datos demográficos.
 4 - IG separar metricas por tipo de post
 '''
+from os import replace
 import pyodbc
 import pandas as pd
 import datetime 
+import json
 
 server = 'localhost'
 database = 'DB_T13'
@@ -53,12 +55,11 @@ class Grafico_engagement_date():
             df = pd.DataFrame(result)
             df.columns = ['id', 'post_date', 'post_messsage', 'engagements']
             df['post_date'] = df['post_date'].map(lambda x : x.strftime("%Y/%m/%d %H:%M:%S"))
-            data = df.to_dict('records')
-
-
-            if not result: raise Exception('(Facebook.get_data) >>> No se encontraron valores.')
+            #data = df.to_dict('records')
+        
+            df.to_csv('./media/grafoFacebook.csv', index=False)
+            #df.to_csv('C:/Users/sebas/Downloads/grafoFacebook.csv', index=False)
         except Exception as e: print(e)
         finally:
             connection.close()
-            return data
-
+            #return data

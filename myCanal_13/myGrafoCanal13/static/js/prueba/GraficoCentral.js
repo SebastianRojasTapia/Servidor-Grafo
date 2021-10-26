@@ -1,3 +1,4 @@
+
 (function (d3, vega, vegaLite, vl, vegaTooltip) {
   'use strict';
 
@@ -24,46 +25,20 @@
       }
     }
   };
-  let inf = window.data
 
-  //'https://gist.githubusercontent.com/Sebans31/9c6838ad91acf03537a75ec4ba54910e/raw/c402b5da25a0c588b804f2eceab7c43ef74e1ab3/PostPerformance.csv';
-  const csvUrl = inf;
-  
- 
-  console.log("Esta es la info")
-  console.log(inf)
+  const csvUrl = 'https://gist.githubusercontent.com/Sebans31/9c6838ad91acf03537a75ec4ba54910e/raw/c402b5da25a0c588b804f2eceab7c43ef74e1ab3/PostPerformance.csv';
 
+  console.log(csvUrl);
   // función para cargar el data del csv
   const getData = async () => {
     const data = await d3.csv(csvUrl);
     return data;
   };
 
-
-  // subquery de data por red social
-  const getDataFrom = async (network) => {
+  const getDataFromColumns = async () => {
   	const data = await getData();
-    console.log(data[0]);
-  	return data.filter(d => d['Network'] == network);
-  };
-
-
-  // funcion para extraer columnas
-  // const extractColumn = (arr, column) => arr.map(x=>x[column]);
-  // const twoDimensionalArray = nodes.map((node) => [node.x, node.y]);
-  // const picked = (({ a, c }) => ({ a, c }))(object);
-
-
-  const getDataFromColumns = async (network) => {
-  	const data = await getData();
-  	const dataNetwork = data.filter(d => d['Network'] == network);
-    console.log(data[0]);
-    const picked = (({ Date, Likes }) => ({ Date, Likes }))(data[0]);
-    console.log(picked);
-  	const dataPicked = dataNetwork.map(d => (({Date, Likes, Engagements, Post}) => ({Date, Likes, Engagements, Post}))(d));
-    console.log(dataPicked);
+  	const dataPicked = data.map(d => (({Date, Likes, Engagements, Post, Network}) => ({Date, Likes, Engagements, Post, Network}))(d));
     return dataPicked;
-    
   };
 
   const getGraph = async (data) => {
@@ -78,7 +53,6 @@
     	.encode(x, y)
     	.width(width);
 
-
   	const grafico = vl
     .markCircle({ opacity: 0.5})
   	.transform(vl.filter(brush))
@@ -90,6 +64,8 @@
         x,
         vl.fieldN('Engagements'),
         vl.fieldN('Post'),
+        vl.fieldN('Likes'),
+        vl.fieldN('Network'),
       ]))
     	.width(width)
       .height(width)
@@ -105,19 +81,7 @@
     return g;
   };
 
-
-  const g2 = vl
-    .markLine({ size : 1 })
-    .encode(
-      vl.x().fieldT('Date').timeUnit("date"),
-      vl.y().fieldQ('Likes').aggregate('average'),
-      vl.color().fieldN('Sentiment'),
-      vl.tooltip().fieldT('Date').timeUnit('date')
-    );
-
   // import { message } from './myMessage';
-
-
 
   vl.register(vega, vegaLite, {
     view: { renderer: 'canvas' },
@@ -125,22 +89,13 @@
   });
 
   const run = async () => {
-    
     // data
-    const twitter = await getDataFromColumns('Twitter');
-    
-    const facebook2 = await getDataFromColumns('Facebook');
-    const facebook = await getDataFrom('Facebook');
-    const instagram = await getDataFrom('Instagram');
-    
+    const twitter = await getDataFromColumns();
     const graph = await getGraph(twitter);
-    const graph_1 = await getGraph(instagram);
 
-  	document.getElementById("grafico1").appendChild(await graph.render());
-    document.getElementById("grafico2").appendChild(await graph_1.render());
-    
+  	document.getElementById("grafico-general").appendChild(await graph.render());
+
   };
-
 
   run();
 

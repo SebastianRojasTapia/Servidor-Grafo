@@ -17,10 +17,9 @@
 <div class="container-fluid mt-5">
   <h2 class="mb-5 text-center">Grafico Canal 13</h2>
   <div class="row">
-    <div class="col-xl-6 text-center">
-      <h2>Grafico Twitter</h2>
-      <div id="grafico1"></div>
-      
+    <div class="col-xl-12 text-center">
+      <h2>Grafico Facebook-Twitter-Instagram</h2>
+      <div id="grafico-general"></div>
       <div class="col-12 text-center">
         <div class="form-check-inline">
           <label class="form-check-label">
@@ -39,32 +38,9 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-6 text-center">
-      <h2>Grafico Instagram</h2>
-      <div id="grafico2"></div>
-      
-    <div class="col-12 text-center">
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
-        </label>
-      </div>
-    </div>
-    </div>
   </div>
 </div>
-
-<script src="{% static 'js/prueba/bundle.js'%}"></script>
+<script src="{% static 'js/prueba/GraficoCentral.js'%}"></script>
 {% endblock contenido %}
 
 {% block js %}

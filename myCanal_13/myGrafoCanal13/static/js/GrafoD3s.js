@@ -66,7 +66,7 @@ var Chart = (function(window, d3) {
       if (linkIndex === -1) {
         link = domain;
         linkScore = 1;
-        
+      
         nodes.push({
           index: index++,
           name: '',
@@ -82,6 +82,8 @@ var Chart = (function(window, d3) {
       else {
         nodes[linkIndex].linkScore++;
         source = nodes[linkIndex].index;
+        //console.log(nodes);
+        
       }
       
       
@@ -97,12 +99,14 @@ var Chart = (function(window, d3) {
           target: target,
           value: 1
         });
-      }
         
+      }
+      console.log(linkPair);
     });
     
     data = json;
-  
+   
+    
     force = d3.layout.force()
       .nodes(nodes) // need to make the array of nodes and links
       .links(links)

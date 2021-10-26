@@ -13,58 +13,80 @@
 <title>Panel Instagram</title>
 {% endblock nombrePestana %}
 {% block contenido %}
-
 <div class="container-fluid mt-5">
   <h2 class="mb-5 text-center">Grafico de Instagram</h2>
   <div class="row">
     <div class="col-xl-6 text-center">
-      <h2>Grafico Instagram</h2>
-      <div id="grafico1"></div>
-      
+      <h2>Grafico Megusta 👍</h2>
+      <div id="grafico-likes"></div> 
       <div class="col-12 text-center">
         <div class="form-check-inline">
           <label class="form-check-label">
-            <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
+            <input id="positivo" type="radio" class="form-check-input" name="Megusta" disabled checked>Positivo
           </label>
         </div>
         <div class="form-check-inline">
           <label class="form-check-label">
-            <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
+            <input id="negativo" type="radio" class="form-check-input" name="Megusta" disabled>Negativo
           </label>
         </div>
         <div class="form-check-inline">
           <label class="form-check-label">
-            <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
+            <input id="neutro" type="radio" class="form-check-input" name="Megusta" disabled>Neutro
           </label>
         </div>
       </div>
     </div>
     <div class="col-xl-6 text-center">
-      <h2>Grafico Instagram</h2>
-      <div id="grafico2"></div>
-      
-    <div class="col-12 text-center">
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="positivo" type="radio" class="form-check-input" name="optradio" disabled>Positivo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="negativo" type="radio" class="form-check-input" name="optradio" disabled>Negativo
-        </label>
-      </div>
-      <div class="form-check-inline">
-        <label class="form-check-label">
-          <input id="neutro" type="radio" class="form-check-input" name="optradio" disabled>Neutro
-        </label>
+      <h2>Grafico Comentarios 📝</h2>
+      <div id="grafico-comentarios"></div>
+      <div class="col-12 text-center">
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="positivo" type="radio" class="form-check-input" name="Comentarios" disabled checked>Positivo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="negativo" type="radio" class="form-check-input" name="Comentarios" disabled>Negativo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="neutro" type="radio" class="form-check-input" name="Comentarios" disabled>Neutro
+          </label>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-xl-12 text-center">
+      <h2>Grafico Guardados </h2>
+      <div id="grafico-saves"></div> 
+      <div class="col-12 text-center">
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="positivo" type="radio" class="form-check-input" name="Guardados" disabled>Positivo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="negativo" type="radio" class="form-check-input" name="Guardados" disabled>Negativo
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input id="neutro" type="radio" class="form-check-input" name="Guardados" disabled checked>Neutro
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<script src="{% static 'js/prueba/bundle.js'%}"></script>
+<script src="{% static 'js/prueba/GraficoInstagram.js'%}"></script>
 {% endblock contenido %}
 
 {% block js %}
