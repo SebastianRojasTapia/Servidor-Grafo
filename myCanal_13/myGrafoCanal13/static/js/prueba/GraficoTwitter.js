@@ -45,7 +45,7 @@
   const getDataFromColumns = async (network) => {
   	const data = await getData();
   	const dataNetwork = data.filter(d => d['Network'] == network);
-  	const dataPicked = dataNetwork.map(d => (({Date, Likes, Comments , Shares , Engagements , Post,"Post Link Clicks":PLinkC, "Other Post Clicks":OPClick,"Post Clicks (All)":PClickAll,"Video Views":VideoViews }) => ({Date, Likes,Comments,Shares, Engagements, Post,PLinkC,OPClick,PClickAll,VideoViews}))(d));
+  	const dataPicked = dataNetwork.map(d => (({Date, Likes, Comments , Shares , Engagements , Post,"Post Link Clicks":PostLinkClicks, "Other Post Clicks":OtroPostClicks,"Post Clicks (All)":PostClicksAll,"Video Views":VideoViews }) => ({Date, Likes,Comments,Shares, Engagements, Post,PostLinkClicks,OtroPostClicks,PostClicksAll,VideoViews}))(d));
     return dataPicked;
   };
 
@@ -72,9 +72,9 @@
         vl.fieldN('Post'),
         vl.fieldN('Comments'),
         vl.fieldN('Shares'),
-        vl.fieldN('PLinkC'),
-        vl.fieldN('OPClick'),
-        vl.fieldN('PClickAll'),
+        vl.fieldN('PostLinkClicks'),
+        vl.fieldN('OtroPostClicks'),
+        vl.fieldN('PostClicksAll'),
         vl.fieldN('VideoViews'),
       ]))
     	.width(width)
@@ -112,9 +112,9 @@
         vl.fieldN('Engagements'),
         vl.fieldN('Post'),
         vl.fieldN('Likes'),
-        vl.fieldN('PLinkC'),
-        vl.fieldN('OPClick'),
-        vl.fieldN('PClickAll'),
+        vl.fieldN('PostLinkClicks'),
+        vl.fieldN('OtroPostClicks'),
+        vl.fieldN('PostClicksAll'),
         vl.fieldN('VideoViews'),
       ]))
     	.width(width)
